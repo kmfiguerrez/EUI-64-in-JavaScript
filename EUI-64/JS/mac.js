@@ -130,6 +130,6 @@ export class MAC {
         }
 
         // Finally return the interface ID.
-        return interfaceID.toLocaleUpperCase();
+        return interfaceID.toUpperCase();
     }
 }
