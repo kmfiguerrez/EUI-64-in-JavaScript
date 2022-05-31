@@ -46,7 +46,10 @@ export class IPv6 {
             if (prefixNumber < 1 || prefixNumber > 128) { 
                 return false;                              
             }            
-        } 
+        }
+        else {
+            this.ipv6InputNoPL = this.ipv6Input // re-initialized
+        }
 
         // Part zero.
         // User input cannnot be empty(undefined).
