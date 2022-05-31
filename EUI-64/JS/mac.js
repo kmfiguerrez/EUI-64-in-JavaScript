@@ -112,7 +112,7 @@ export class MAC {
         // To convert(flip) 7 bit in the first group of the interface ID. 
         for (let key in sevenBitConversion) {  // Iterate over the keys of the dict seven_bit_conversion.
             if (macAddress[1] === key) {       // The seven bit is located in the second hex digit: macAddress[1].
-                macAddress[1] = key;           // Change the second hex digit.
+                macAddress[1] = sevenBitConversion[key];  // Change the second hex digit.
                 break;
             }
         }
