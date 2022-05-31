@@ -20,15 +20,15 @@ export class MAC {
         // Four types of mac address format.
         // Hyphen notation: B4-2E-99-F1-48-5A
         // longer pattern: /^[\dA-F]{2}-[\dA-F]{2}-[\dA-F]{2}-[\dA-F]{2}-[\dA-F]{2}-[\dA-F]{2}$/i
-        const format1 = /^([\da-z]{2}-?){6}$/i; // i is a modifier means case-insensitive.
+        const format1 = /^([\da-f]{2}-?){6}$/i; // i is a modifier means case-insensitive.
         // Colon notation: B4:2E:99:F1:48:5A
         // longer pattern: /^[\dA-F]{2}:[\dA-F]{2}:[\dA-F]{2}:[\dA-F]{2}:[\dA-F]{2}:[\dA-F]{2}$/i
-        const format2 = /^([\da-z]{2}:?){6}$/i; // i is a modifier means case-insensitive.
+        const format2 = /^([\da-f]{2}:?){6}$/i; // i is a modifier means case-insensitive.
         // Colon notation that usually use on networking devices like switches and router: B42E:99F1:485A
         // longer pattern: /^[\dA-F]{4}:[\dA-F]{4}:[\dA-F]{4}$/i
-        const format3 = /^([\dA-F]{4}:?){3}$/i; // i is a modifier means case-insensitive.
+        const format3 = /^([\da-f]{4}:?){3}$/i; // i is a modifier means case-insensitive.
         // Just hex digits notation: B42E99F1485A
-        const format4 = /^[\dA-F]{12}$/i; // i is a modifier means case-insensitive.
+        const format4 = /^[\da-f]{12}$/i; // i is a modifier means case-insensitive.
 
         // const this.macInput = this.this.macInput; // To avoid using "this".
         const formats = [format1, format2, format3, format4]; // Will check user input against these formats.
